@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Roboto Mono", monospace;
+    background-color: #0f0f1a;
+    color: #d6d6e7;
+
+    background-image: radial-gradient(circle at top, #1a1a2e, #0a0a12);
+}
+
+/* HEADER */
+
+header {
+     background: linear-gradient(to bottom, #0c0c18, #070711);
+    text-align: center;
+    padding: 25px;
+    border-bottom: 1px solid #1e1e35;
+}
+
+header h2 {
+    color: #cfd3ff;
+    font-size: 32px;
+    letter-spacing: 3px;
+
+    text-shadow:
+        0 0 5px #8a90ff,
+        0 0 15px #6f75ff,
+        0 0 25px #4c52ff;
+}
+
+header nav {
+    float: right;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #cfd3ff;
+    margin: 10px;
+    text-shadow:
+        0 0 5px #8a90ff,
+        0 0 15px #6f75ff,
+        0 0 25px #4c52ff;
+}
+
+/* LAYOUT CENTRAL */
+
+main {
+    display: flex;
+    margin: 20px;
+}
+
+main img {
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+main img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(120,120,255,0.4);
+}
+
+main,
+#texto{
+    letter-spacing: 3px;
+    gap: 20px;
+}
+
+#secao1 h2 {
+    font-size: 26px;
+    text-shadow:
+        0 0 5px #8a90ff,
+        0 0 15px #6f75ff,
+        0 0 25px #4c52ff;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: linear-gradient(to top, #0c0c18, #070711);
+    border-top: 1px solid #1e1e35;
+}
+footer p{
+    color: #9aa0ff;
+}
