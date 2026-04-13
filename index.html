@@ -1,45 +1,49 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="images/x-icon" href="images/icon2.jpg">
-    <title>Projeto</title>
+    <link rel="icon" type="icon" href="images/icon.jpg">
+    <title>Sobre o jogo</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="pagina-inicial">
+    
 
     <header>
-        <h2>Whispers of the Nine Lives</h2>
+        <h2 class="subtitulo">Whispers of the Nine Lives</h2>
 
         <nav>
-            <a href="sobre-mim.html" title="Sobre mim msm">Sobre mim</a>
+            <a href="desenvolvedor.html" title="Sobre mim msm">Desenvolvedor</a>
             <a href="persona.html" title="Persona criada">Persona</a>
-            <a href="Historia.html" title="Historia do game"></a>
-            <a href="Jogar-Agora.html" title="Jogue o nosso jogo">Jogue Agora</a>
+            <a href="prologo.html" title="Historia do game">prólogo</a>
+            <a href="../game/index.html" target="_blank" class="btn-jogar">🎮 Jogar</a>
+            <button onclick="toggleTema()" id="tema-btn">🌙</button>
+
         </nav>
     </header>
-
+    <div class="conteudo-sensivel">
+    
     <main>
 
-        <img src="images/gatopixel.png" alt="gato hollow" width="545" height="335">
+        <img src="images/gatopixel.png" class="esconder" alt="gato hollow" width="545" height="335">
 
         <section id="secao">
 
-            <h2>Beyond the Cave</h2>
+            <h2 class="subtitulo">Beyond the Cave</h2>
 
             <p class="descricao">
-                Deep beneath the surface lies a mysterious world waiting to be discovered.
-                Hidden passages, ancient secrets, and forgotten creatures dwell in the
-                darkness beyond the cave.<br> and forgotten creatures dwell in the
-                darkness beyond the cave.suscipit, expedita, qui.
+                Nyx desperta em um mundo silencioso e esquecido.
+                Ruínas antigas escondem fragmentos de um passado perdido.
+                À medida que desce mais fundo, a escuridão começa a responder.
+                Algo observa. Algo espera.
             </p>
 
         </section>
@@ -48,31 +52,82 @@
         <section id="skills">
             <div class="texto">
                 
-                <h2>Use Your Skills and Reflexes to Survive</h2>
+                <h2 class="subtitulo">Use Your Skills and Reflexes to Survive</h2>
 
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit fugit consectetur inventore necessitatibus architecto, nulla nemo? Sed suscipit, expedita, qui quia esse deserunt maxime optio nobis vel, veniam eveniet quae!
+                        Em Whispers of the Nine Lives, cada movimento importa.
+                        Nyx precisa reagir rápido, dominar suas habilidades
+                        e sobreviver a um mundo que está sempre mudando.
+                        <ul>
+                            <li>Atacar — enfrente criaturas com golpes rápidos e precisos</li>
+                            <li>Pular — desvie de perigos e alcance novas áreas escondidas</li>
+                            <li>Mundo Espiritual — atravesse dimensões e revele caminhos invisíveis</li>
+                        </ul>
                     </p>
             </div>
-            <img src="images/blackcat.png" alt="gato" class="gato" width="335px">
+            <img src="images/protagonista.png" class="gato esconder" alt="gato" class="gato" width="335px">
         </section>
 
         <section id="bloco3">
             <div class="secao3">
 
-                <h2>simple pixel art</h2>
+                <h2 class="subtitulo">simple pixel art</h2>
 
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae iure, architecto reiciendis tempore provident, officia ipsam, amet ullam magni dolorum velit. Minus doloribus ducimus enim iusto nostrum hic quae ipsam!</p>
+                <p>O jogo utiliza uma pixel art simples, mas expressiva.
+                    Cada cenário foi pensado para transmitir atmosfera e mistério.
+                    Luz e sombra trabalham juntas para criar profundidade.
+                    Mesmo minimalista, o mundo carrega identidade própria.</p>
 
             </div>
-            <img src="images/gato-de-animezinho.jpg" alt="gato de anime" width="225px">
+            <img src="images/gato-de-animezinho.jpg" class="esconder" alt="gato de anime" width="225px">
 
         </section>
 
-    <footer>
-        <p>desenvolvido por joaomaduro</p>
-    </footer>
+        <h1 class="titulo-card">Explore os 4 mundos silenciados pelo o Sussurro</h1>
 
+            <div class="cards-container">
+                <div class="card">
+                <img src="images/Preview 1.png" alt="foto-1">
+                <h3>Caverna dos sonhos</h3>
+                <p>Uma caverna repleta de minérios capazes de moldar sonhos. Agora, tudo está em silêncio — como se algo tivesse apagado sua essência.</p>
+                </div>
+                <div class="card">
+                    <img src="images/game_background_1.png" alt="foto-2">
+                    <h3>Floresta desolador</h3>
+                    <p>Uma floresta consumida pelo Sussurro. A magia ainda permanece no ar, mas tudo que entra nela nunca sai igual.</p>
+                </div>
+                <div class="card">
+                    <img src="images/Preview 3.png" alt="foto-3">
+                    <h3>Caverna de sakura</h3>
+                    <p>Flores de sakura crescem neste lugar por um motivo desconhecido. Algo ali insiste em manter a vida… ou esconder um segredo.</p>
+                </div>
+                <div class="card">
+                    <img src="images/Preview 4.png" alt="foto-4">
+                    <h3>Lago escondido</h3>
+                    <p>Um lago oculto nas profundezas. Suas águas são calmas, mas algo antigo se move sob a superfície.</p>
+                </div>
+            </div>
+        </div>
+
+        <section id="info-jogo">
+    <h2 class="titulo-card">Informações do Jogo</h2>
+
+    <div class="cards-container">
+        <div class="card" id="dev"></div>
+        <div class="card" id="genre"></div>
+        <div class="card" id="platform"></div>
+        <div class="card" id="price"></div>
+        <div class="card" id="rating"></div>
+    </div>
+</section>
+
+
+    <footer>
+        <p>© 2026 - João Alfredo</p>
+    </footer>
+    <script src="script.js">
+    </script>
+</div>
 </body>
 
 </html>

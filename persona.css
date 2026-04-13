@@ -1,0 +1,386 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto Mono", monospace;
+    background-color: #0f0f1a;
+    color: #d6d6e7;
+    background-image: radial-gradient(circle at top, #1a1a2e, #0a0a12);
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: linear-gradient(to bottom, #0c0c18, #070711);
+    padding: 20px;
+    border-bottom: 1px solid #1e1e35;
+}
+
+header h2 {
+    color: #aeb4ff;
+    font-size: 22px;
+    letter-spacing: 2px;
+
+    text-shadow:
+        0 0 3px #6f75ff,
+        0 0 8px #4c52ff;
+}
+
+/* NAV */
+
+header nav a {
+    position: relative;
+    text-decoration: none;
+    color: #cfd3ff;
+    margin: 5px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+header nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: #8a90ff;
+    box-shadow: 0 0 8px #8a90ff;
+    transition: width 0.3s ease;
+}
+
+header nav a:hover::after {
+    width: 100%;
+}
+
+header nav a:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+    text-shadow: 0 0 5px #8a90ff, 0 0 15px #6f75ff, 0 0 25px #4c52ff;
+}
+
+/* BOTÃO */
+
+.btn-jogar {
+    background: linear-gradient(45deg, #4c52ff, #8a90ff);
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 0 10px #4c52ff;
+}
+
+.btn-jogar:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #8a90ff, 0 0 40px #4c52ff;
+}
+
+/* LAYOUT */
+
+main {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* TOPO */
+
+.persona-topo {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.imagem-principal {
+    flex: 1.2;
+}
+
+.imagem-principal img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.imagem-principal img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 30px rgba(120,120,255,0.5);
+}
+
+/* TEXTO */
+
+.info {
+    flex: 1;
+}
+
+.info h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+
+    text-shadow:
+        0 0 5px #8a90ff,
+        0 0 15px #6f75ff,
+        0 0 25px #4c52ff;
+}
+
+.info h2,
+.texto h2,
+.persona-pc h2 {
+    margin-top: 20px;
+    font-size: 22px;
+
+    text-shadow:
+        0 0 5px #8a90ff,
+        0 0 15px #6f75ff;
+}
+
+.info p {
+    margin-top: 5px;
+}
+
+.info strong {
+    color: #cfd3ff;
+
+    text-shadow:
+        0 0 5px #8a90ff,
+        0 0 10px #6f75ff;
+}
+
+/* MEIO */
+
+.persona-meio {
+    display: flex;
+    gap: 40px;
+    margin-top: 60px;
+    align-items: center;
+}
+
+.texto {
+    flex: 1;
+}
+
+.imagem-secundaria {
+    flex: 1.2;
+}
+
+.imagem-secundaria img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.imagem-secundaria img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(120,120,255,0.4);
+}
+
+/* PC */
+
+.persona-pc {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.persona-pc img {
+    width: 100%;
+    max-width: 700px;
+    margin-top: 20px;
+    border-radius: 12px;
+
+    transition: 0.3s;
+}
+
+.persona-pc img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 30px rgba(120,120,255,0.5);
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+    border-top: 1px solid #1e1e35;
+}
+
+footer p {
+    color: #cfd3ff;
+    letter-spacing: 2px;
+
+    text-shadow:
+        0 0 5px #8a90ff,
+        0 0 15px #6f75ff;
+}
+
+/* ANIMAÇÃO */
+
+.esconder {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.6s;
+}
+
+.aparecer {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* BOTÃO TEMA */
+#tema-btn {
+    background: none;
+    border: 1px solid #8a90ff;
+    color: #cfd3ff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#tema-btn:hover {
+    background: #8a90ff;
+    color: #0f0f1a;
+}
+
+/* 🌞 MODO CLARO */
+.light-mode {
+    background-color: #f5f5f5;
+    color: #222;
+    background-image: none;
+}
+
+/* HEADER MAIS ESCURO (igual você pediu) */
+.light-mode header {
+    background: linear-gradient(to bottom, #e4e6ff, #cfd3ff);
+    border-bottom: 1px solid #aab0ff;
+}
+
+.light-mode header h2 {
+    color: #2a2f6b;
+
+    text-shadow:
+        0 0 5px rgba(138,144,255,0.5),
+        0 0 10px rgba(111,117,255,0.3);
+}
+
+.light-mode nav a {
+    color: #333;
+}
+
+/* TEXTOS */
+.light-mode p,
+.light-mode li,
+.light-mode strong {
+    color: #333;
+}
+
+/* CARDS */
+.light-mode .card {
+    background: rgba(255,255,255,0.8);
+    color: #222;
+    border: 1px solid #ccc;
+}
+
+/* TÍTULOS */
+.light-mode h2,
+.light-mode h3 {
+    color: #2a2f6b;
+}
+
+/* FOOTER */
+.light-mode footer {
+    background: #e4e6ff;
+}
+
+.light-mode footer p {
+    color: #2a2f6b;
+}
+
+/* RESPONSIVO */
+
+/* CELULAR */
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    header nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .persona-topo,
+    .persona-meio {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .info h1 {
+        font-size: 24px;
+    }
+
+    .info h2,
+    .texto h2 {
+        font-size: 18px;
+    }
+
+    .info p,
+    .texto p {
+        font-size: 14px;
+    }
+}
+
+/* TABLET */
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    .persona-topo,
+    .persona-meio {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info,
+    .texto {
+        max-width: 80%;
+    }
+}
+
+/* TELAS GRANDES */
+@media (min-width: 1400px) {
+
+    main {
+        max-width: 1300px;
+    }
+
+    .persona-topo,
+    .persona-meio {
+        gap: 60px;
+    }
+
+    .info h1 {
+        font-size: 38px;
+    }
+
+    .info h2,
+    .texto h2,
+    .persona-pc h2 {
+        font-size: 24px;
+    }
+
+    .info p,
+    .texto p {
+        font-size: 18px;
+    }
+}

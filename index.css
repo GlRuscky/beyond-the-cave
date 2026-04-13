@@ -1,0 +1,574 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto Mono", monospace;
+    background-color: #0f0f1a;
+    color: #d6d6e7;
+    background-image: radial-gradient(circle at top, #1a1a2e, #0a0a12);
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: linear-gradient(to bottom, #0c0c18, #070711);
+    padding: 20px;
+    border-bottom: 1px solid #1e1e35;
+}
+
+header h2 {
+    color: #cfd3ff;
+    font-size: 22px;
+    letter-spacing: 2px;
+
+    text-shadow:
+        0 0 5px #8a90ff,
+        0 0 15px #6f75ff,
+        0 0 25px #4c52ff;
+}
+
+/* NAV */
+
+header nav a {
+    position: relative;
+    text-decoration: none;
+    color: #cfd3ff;
+    margin: 5px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+/* underline animado */
+header nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: #8a90ff;
+    box-shadow: 0 0 8px #8a90ff;
+    transition: width 0.3s ease;
+}
+
+header nav a:hover::after {
+    width: 100%;
+}
+
+header nav a:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+    text-shadow: 0 0 5px #8a90ff, 0 0 15px #6f75ff, 0 0 25px #4c52ff;
+}
+
+/* BOTÃO JOGAR */
+
+.btn-jogar {
+    background: linear-gradient(45deg, #4c52ff, #8a90ff);
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 0 10px #4c52ff;
+}
+
+.btn-jogar:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #8a90ff, 0 0 40px #4c52ff;
+}
+
+/* LAYOUT CENTRAL */
+
+main,
+#skills,
+#bloco3 {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#skills ul {
+    list-style-position: inside;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+#skills li {
+    margin-top: 5px;
+}
+
+/* PRIMEIRO BLOCO */
+
+main {
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+    gap: 60px;
+}
+
+main img {
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+main img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(120,120,255,0.4);
+}
+
+main section p {
+    font-size: 18px;
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+/* SEGUNDO BLOCO */
+
+#skills {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 120px;
+    gap: 60px;
+}
+
+#skills img {
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+#skills img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(120,120,255,0.4);
+}
+
+#skills .texto {
+    max-width: 650px;
+}
+
+#skills p {
+    font-size: 18px;
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+/* TERCEIRO BLOCO */
+
+#bloco3 {
+    margin-top: 120px;
+}
+
+#bloco3 .secao3 {
+    font-size: 18px;
+    max-width: 700px;
+}
+
+#bloco3 p {
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+#bloco3 img {
+    display: block;
+    margin: 50px auto;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+#bloco3 img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(120,120,255,0.4);
+}
+
+/* 🔥 TÍTULOS (HIERARQUIA MELHORADA) */
+
+#secao h2,
+#skills h2,
+#bloco3 h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    color: #e0e4ff;
+
+    text-shadow:
+        0 0 5px #8a90ff,
+        0 0 15px #6f75ff;
+
+    position: relative;
+}
+
+/* CARDS */
+
+.titulo-card {
+    font-size: 26px;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+
+    text-shadow:
+        0 0 5px #8a90ff,
+        0 0 15px #6f75ff,
+        0 0 25px #4c52ff;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.card {
+    background: rgba(30, 30, 60, 0.4);
+    border: 1px solid rgba(120,120,255,0.2);
+    backdrop-filter: blur(8px);
+
+    color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 220px;
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 0 25px rgba(120,120,255,0.4);
+}
+
+.card img {
+    width: 100%;
+}
+
+.card h3 {
+    margin: 10px 0 5px 0;
+}
+
+.card p {
+    font-size: 0.9em;
+    padding: 0 10px 10px 10px;
+}
+
+/* FOOTER */
+
+footer {
+    background: linear-gradient(to top, #0c0c18, #070711);
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid #1e1e35;
+    margin-top: 120px;
+}
+
+footer p {
+    color: #cfd3ff;
+    letter-spacing: 2px;
+
+    text-shadow:
+        0 0 5px #8a90ff,
+        0 0 15px #6f75ff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* BOTÃO TEMA */
+#tema-btn {
+    background: none;
+    border: 1px solid #8a90ff;
+    color: #cfd3ff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#tema-btn:hover {
+    background: #8a90ff;
+    color: #0f0f1a;
+}
+
+/* 🌞 MODO CLARO */
+.light-mode {
+    background-color: #f5f5f5;
+    color: #222;
+    background-image: none;
+}
+.light-mode #secao h2,
+.light-mode #skills h2,
+.light-mode #bloco3 h2 {
+    color: #2a2f6b;
+    
+    text-shadow:
+        0 0 5px rgba(138,144,255,0.5),
+        0 0 10px rgba(111,117,255,0.3);
+}
+
+
+.light-mode {
+    background-color: #f5f5f5;
+    color: #222;
+    background-image: none;
+}
+
+.light-mode header {
+    background: linear-gradient(to bottom, #e4e6ff, #cfd3ff);
+    border-bottom: 1px solid #aab0ff;
+}
+
+.light-mode nav a {
+    color: #333;
+}
+
+.light-mode #texto {
+    background: rgba(255,255,255,0.7);
+}
+
+.light-mode .social {
+    background: rgba(0,0,0,0.05);
+    color: #222;
+}
+.light-mode header h2 {
+    color: #2a2f6b;
+
+    text-shadow:
+        0 0 5px rgba(138,144,255,0.5),
+        0 0 10px rgba(111,117,255,0.3);
+}
+
+/* HEADER MAIS ESCURO (igual você pediu) */
+.light-mode header {
+    background: linear-gradient(to bottom, #e4e6ff, #cfd3ff);
+    border-bottom: 1px solid #aab0ff;
+}
+
+.light-mode header h2 {
+    color: #2a2f6b;
+
+    text-shadow:
+        0 0 5px rgba(138,144,255,0.5),
+        0 0 10px rgba(111,117,255,0.3);
+}
+
+.light-mode nav a {
+    color: #333;
+}
+
+/* TEXTOS */
+.light-mode p,
+.light-mode li {
+    color: #333;
+}
+
+/* CARDS */
+.light-mode .card {
+    background: rgba(255,255,255,0.8);
+    color: #222;
+    border: 1px solid #ccc;
+}
+
+/* TÍTULOS */
+.light-mode h2,
+.light-mode h3 {
+    color: #2a2f6b;
+}
+
+/* FOOTER */
+.light-mode footer {
+    background: #e4e6ff;
+}
+
+.light-mode footer p {
+    color: #2a2f6b;
+}
+
+
+
+/* ===================== */
+/* 📱 CELULAR (até 600px) */
+/* ===================== */
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    header nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header nav a {
+        font-size: 13px;
+        padding: 6px 10px;
+    }
+
+    main {
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    main img {
+        width: 100%;
+    }
+
+    #secao h2 {
+        font-size: 22px;
+    }
+
+    main section p {
+        font-size: 15px;
+    }
+
+    /* SKILLS */
+    #skills {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+        margin-top: 60px;
+    }
+
+    #skills .texto {
+        max-width: 100%;
+    }
+
+    #skills img {
+        width: 200px;
+    }
+
+    /* BLOCO 3 */
+    #bloco3 {
+        margin-top: 60px;
+        text-align: center;
+    }
+
+    #bloco3 img {
+        width: 180px;
+    }
+
+    /* CARDS */
+    .titulo-card {
+        font-size: 22px;
+        margin-top: 60px;
+    }
+
+    .cards-container {
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+
+/* ===================== */
+/* 📲 TABLET (601px até 1024px) */
+/* ===================== */
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    header nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    main img {
+        width: 80%;
+    }
+
+    #skills {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 40px;
+    }
+
+    #skills .texto {
+        max-width: 80%;
+    }
+
+    #skills img {
+        width: 250px;
+    }
+
+    #bloco3 {
+        text-align: center;
+    }
+
+    #bloco3 img {
+        width: 220px;
+    }
+
+    .cards-container {
+        justify-content: center;
+    }
+
+    .card {
+        width: 250px;
+    }
+}
+
+
+/* ===================== */
+/* 💻 NOTEBOOK GRANDE */
+/* ===================== */
+@media (min-width: 1400px) {
+
+    main,
+    #skills,
+    #bloco3 {
+        max-width: 1300px;
+    }
+
+    main {
+        gap: 80px;
+    }
+
+    #skills {
+        gap: 80px;
+    }
+
+    #secao h2,
+    #skills h2,
+    #bloco3 h2 {
+        font-size: 32px;
+    }
+
+    main section p,
+    #skills p,
+    #bloco3 p {
+        font-size: 20px;
+    }
+
+    .card {
+        width: 260px;
+    }
+}

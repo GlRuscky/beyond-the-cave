@@ -1,0 +1,26 @@
+body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(#0a0a12, #1a1a2e);
+        font-family: Arial, sans-serif;
+    }
+
+    .botao-jogar {
+        text-decoration: none;
+        background: #6a00ff;
+        color: white;
+        padding: 20px 50px;
+        font-size: 28px;
+        border-radius: 12px;
+        box-shadow: 0 0 20px rgba(106, 0, 255, 0.6);
+        transition: 0.3s;
+    }
+
+    .botao-jogar:hover {
+        background: #8c2cff;
+        transform: scale(1.1);
+        box-shadow: 0 0 30px rgba(140, 44, 255, 0.9);
+    }
